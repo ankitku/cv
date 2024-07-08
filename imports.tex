@@ -1,0 +1,13 @@
+
+% Character encoding
+\usepackage[utf8]{inputenc}                   % Replace with \usepackage[utf8x]{inputenc} if using xelatex or lualatex
+
+% Adjust the page margins
+\usepackage[scale=0.75]{geometry}
+
+% Redefine command to include FontAwesome icons
+\renewcommand*{\addressfont}{\faMapMarker\ \addressfont}
+\newcommand*{\phonefont}{\faPhone\ \addressfont}
+\newcommand*{\emailfont}{\faEnvelope\ \addressfont}
+\newcommand*{\homepagefont}{\faGlobe\ \addressfont}
+\newcommand*{\socialfont}[1]{\ifthenelse{\equal{#1}{linkedin}}{\faLinkediN}{\ifthenelse{\equal{#1}{github}}{\faGithub}{}} \addressfont}

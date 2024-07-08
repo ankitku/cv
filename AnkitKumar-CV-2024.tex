@@ -1,0 +1,85 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+\include{imports}
+% ModernCV themes
+\moderncvstyle{banking}                       % Style: casual, classic, banking, oldstyle, fancy
+\moderncvcolor{blue}                          % Color: blue, orange, green, red, purple, grey, black
+
+% Personal data
+\name{Ankit}{Kumar}
+%\title{Curriculum Vitae}                       % Optional title
+\address{Khoury College of Computer Sciences, Northeastern University, Boston} % Optional address
+\phone[mobile]{+1~(857)~869~5430}                % Phone number
+\email{ankitkumar.itbhu@gmail.com}                   % Email address
+\homepage{ankitku.github.io}                      % Personal website
+\social[linkedin]{ankitkumar1988}                      % LinkedIn profile
+\social[github]{ankitku}                        % GitHub profile
+
+\begin{document}
+
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Professional Summary}
+Experienced Applied Scientist with a background in finance and tech
+industries, having worked at Rivos, Amazon, Morgan Stanley and
+Olacabs. During my tenure as a software developer in India, I was
+highly interested in types and property based testing. Pursuing this
+passion, I earned a PhD in formal methods, equipping myself with tools
+and techniques required to ensure software reliability and
+correctness. I am now eager to leverage my academic expertise and
+industry experience to implement formal methods in practical
+applications, driving innovation and enhancing software quality in
+real-world projects.
+
+\section{Education}
+\cventry{2018--2024}{PhD in Computer Science}{Northeastern
+  University}{Boston, MA, USA}{}{Applied theorem proving, counter-example
+  generation and the theory of refinement to analyze the Gossipsub
+  P2P protocol. Also worked on automated feedback
+  for homework submissions, proof checking and decision procedures for
+  solving string equations.}
+\quad\cvitem{Thesis}{Refinement based reasoning of P2P
+  protocols is feasible and useful}
+
+\cventry{2015--2017}{M.Tech in Computer Science}{IIT Kanpur}{Kanpur,
+  UP, India}{}{}
+\cventry{2006-2010}{B.Tech in Electrical Engineering}{IIT (BHU)
+  Varanasi}{Varanasi, UP, India}{}{}
+
+\section{Professional Experience}
+\cventry{Summer 2023}{Member of Technical Staff, Intern}{Rivos
+  Inc.}{Portland, OR, USA}{}{Formalized and proved security properties
+  about the page walk algorithm and certain chip components using the
+  ACL2s theorem prover.}
+\cventry{Summer 2022}{Applied Scientist Intern}{Amazon}{Minneapolis,
+  MN, USA}{}{Proposed and demonstrated using taint-analysis for cloud level
+  tracking of critical data across AWS resources.}
+\cventry{2012-2014}{Software Development Engineer
+  II}{Olacabs}{Bengaluru, KA, India}{}{Wrote the first version of the
+  Olacabs android consumer app. Worked on performance enhancement of
+  the Olacabs driver app which sends the location of cab to backend
+  services. Worked on cashless payment and online wallet systems.}
+\cventry{2010-2012}{Associate}{Morgan Stanley Advantage
+  Services}{Mumbai, MH, India}{}{Planned and enabled the Third Party
+  Derivatives trading platform at Morgan Stanley to be rolled out to
+  new markets by making its code region aware, modular and pluggable.}
+
+\bibliographystyle{eptcs}
+\nocite{*}
+\bibliography{pubs.bib}
+
+\section{Computer Skills}
+C, C++, Java, Lisp, ACL2, ACL2s, Coq, Haskell, Emacs, Git, \LaTeX
+
+\section{Awards and Honors}
+\cvitem{Fellowship}{Dissertation Completion Fellowship during Summer
+  2024.}
+\cvitem{Invited Talk - Syracuse University 2024}{Formal Model-Driven Analysis of Resilience of GossipSub to Attacks from Misbehaving Peers}
+\cvitem{Award}{Best Student Paper Award for our paper
+  ``Verification of GossipSub in ACL2s''  at ACL2 Workshop 2023.}
+\cvitem{Invited Talk - IPFS Camp at Lisbon,
+  2022}{\href{https://www.youtube.com/watch?v=T3QLhijHAwA}{Formal
+    Analysis of GossipSub : Property Driven Dev for Security}}
+\cvitem{Fellowship}{Student Travel Fellowship to attend PLMW at POPL 2019 conference.}
+\cvitem{Award}{\href{https://www.youtube.com/watch?v=AFact1zmnEM}{First Prize} at Droidcon India - Bangalore 2013 \href{https://www.youtube.com/watch?v=3qtuORgVMrQ}{Hackathon}}
+\end{document}
