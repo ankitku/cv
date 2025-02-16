@@ -18,21 +18,64 @@
 
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
-
+\vspace{-1cm}
 \section{Professional Summary}
 Experienced Applied Scientist with a background in finance and tech
 industries, having worked at Rivos, Amazon, Morgan Stanley and
-Olacabs. During my tenure as a software developer in India, I was
-highly interested in types and property based testing. Pursuing this
-passion, I earned a PhD in formal methods, equipping myself with tools
-and techniques required to ensure software reliability and
-correctness. I am now eager to leverage my academic expertise and
+Olacabs, eager to leverage my academic expertise and
 industry experience to implement formal methods in practical
 applications, driving innovation and enhancing software quality in
 real-world projects.
 
+\section{Computer Skills}
+C, C++, Java, Rust, Lisp, ACL2, ACL2s, Coq, Haskell, Emacs, Git,
+\LaTeX
+
+\section{Professional Experience}
+\cventry{Summer 2023}{Member of Technical Staff, Intern}{Rivos
+  Inc.}{Portland, OR, USA}{}{}
+\begin{itemize}
+\item Formalized and proved security properties
+  about the page walk algorithm used by a RISC-V based hypervisor (high level model).
+\item Reduced ($\approx10$x) the time required to prove existing security theorems
+  stated in Jaspergold (low level model) from days to hours, by
+  transferring some of the identified helpful lemma from the high
+  level model.
+\item ACL2, ACL2 Sedan, Jaspergold
+\end{itemize}
+\cventry{Summer 2022}{Applied Scientist Intern}{Amazon}{Minneapolis,
+  MN, USA}{}{}
+\begin{itemize}
+  \item Created a tool to identify possible critical data leaks from
+    AWS resources.
+  \item The tool demonstrated the use of taint-analysis tools for cloud
+    level tracking of critical data across AWS resources.
+  \item This technique was patented, and I received an incline offer
+    from Amazon. 
+  \item Java, Grails, github, shell scripting
+\end{itemize}
+
+\cventry{2012-2014}{Software Development Engineer
+  II}{Olacabs}{Bengaluru, KA, India}{}{}
+\begin{itemize}
+  \item Wrote the first version of the
+    Olacabs android consumer app, responsible for over 80\% of all cab bookings. 
+  \item Debugged the Olacabs driver app, reducing instances of phone
+    crashes by more than 60\%.
+  \item Worked on cashless payment and online wallet systems. 
+\end{itemize}
+
+\cventry{2010-2012}{Associate}{Morgan Stanley Advantage
+  Services}{Mumbai, MH, India}{}{}
+\begin{itemize}
+\item Refactored a derivatives trading platform to be region aware.
+\item Rolled out the platform to new markets (HK, SG) which increased
+  the number of trades it handled by more than 2x.
+\end{itemize}
+
+
 \section{Education}
-\cventry{2018--2024}{PhD in Computer Science}{Northeastern
+\cventry{2018--2025}{PhD in Computer Science}{Northeastern
   University}{Boston, MA, USA}{}{Applied theorem proving, counter-example
   generation and the theory of refinement to analyze the Gossipsub
   P2P protocol. Also worked on automated feedback
@@ -46,31 +89,9 @@ real-world projects.
 \cventry{2006-2010}{B.Tech in Electrical Engineering}{IIT (BHU)
   Varanasi}{Varanasi, UP, India}{}{}
 
-\section{Professional Experience}
-\cventry{Summer 2023}{Member of Technical Staff, Intern}{Rivos
-  Inc.}{Portland, OR, USA}{}{Formalized and proved security properties
-  about the page walk algorithm and certain chip components using the
-  ACL2s theorem prover.}
-\cventry{Summer 2022}{Applied Scientist Intern}{Amazon}{Minneapolis,
-  MN, USA}{}{Proposed and demonstrated using taint-analysis for cloud level
-  tracking of critical data across AWS resources. This work resulted
-  in a patent application and an incline offer.}
-\cventry{2012-2014}{Software Development Engineer
-  II}{Olacabs}{Bengaluru, KA, India}{}{Wrote the first version of the
-  Olacabs android consumer app. Worked on performance enhancement of
-  the Olacabs driver app which sends the location of cab to backend
-  services. Worked on cashless payment and online wallet systems.}
-\cventry{2010-2012}{Associate}{Morgan Stanley Advantage
-  Services}{Mumbai, MH, India}{}{Planned and enabled the Third Party
-  Derivatives trading platform at Morgan Stanley to be rolled out to
-  new markets by making its code region aware, modular and pluggable.}
-
-\bibliographystyle{eptcs}
+\bibliographystyle{IEEE}
 \nocite{*}
 \bibliography{pubs.bib}
-
-\section{Computer Skills}
-C, C++, Java, Rust, Lisp, ACL2, ACL2s, Coq, Haskell, Emacs, Git, \LaTeX
 
 \section{Awards and Honors}
 \cvitem{Fellowship}{Dissertation Completion Fellowship during Summer
