@@ -1,108 +1,157 @@
-\documentclass[11pt,a4paper,sans]{moderncv}
-\include{imports}
-% ModernCV themes
-\moderncvstyle{banking}                       % Style: casual, classic, banking, oldstyle, fancy
-\moderncvcolor{blue}                          % Color: blue, orange, green, red, purple, grey, black
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{xcolor} % For subtle gray text
 
-% Personal data
-\name{Ankit}{Kumar}
-%\title{Curriculum Vitae}                       % Optional title
-\address{Khoury College of Computer Sciences, Northeastern University, Boston} % Optional address
-\phone[mobile]{+1~(857)~869~5430}                % Phone number
-\email{ankitkumar.itbhu@gmail.com}                   % Email address
-\homepage{ankitku.github.io}                      % Personal website
-\social[linkedin]{ankitkumar1988}                      % LinkedIn profile
-\social[github]{ankitku}                        % GitHub profile
+% Remove page numbers
+\pagestyle{empty}
+
+% Simple formatting
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist{nosep, leftmargin=1em}
+\setlist[itemize]{label=\textcolor{gray}{--}, 
+                  itemsep=2pt, 
+                  topsep=4pt,
+                  left=1.5em,
+                  before=\color{darkgray}}
+
+
+% Custom section formatting
+\newcommand{\cvsection}[1]{
+    \vspace{0.5em}
+    \textbf{\large #1}
+    \vspace{0.2em}
+    \hrule
+    \vspace{0.3em}
+}
+
+% Custom entry formatting
+\newcommand{\cventry}[6]{
+    \textbf{#1} | #2 | #3 | #4
+    \vspace{0.1em}
+    #6
+    \vspace{0.3em}
+}
 
 \begin{document}
 
-%-----       resume       ---------------------------------------------------------
-\makecvtitle
-\vspace{-1cm}
-\section{Professional Summary}
-Experienced Applied Scientist with a background in finance and tech
-industries, having worked at Rivos, Amazon, Morgan Stanley and
-Olacabs, eager to leverage my academic expertise and
-industry experience to implement formal methods in practical
-applications, driving innovation and enhancing software quality in
-real-world projects.
+% Header
+\begin{center}
+    \textbf{\LARGE ANKIT KUMAR}
+    \vspace{0.3em}
 
-\section{Computer Skills}
-C, C++, Java, Rust, Lisp, ACL2, ACL2 Sedan, Coq, Haskell, Emacs, Git,
-\LaTeX
+    Email: ankitkumar.itbhu@gmail.com | Phone: +1 (857) 869-5430
 
-\section{Professional Experience}
-\cventry{Summer 2023}{Member of Technical Staff, Intern}{Rivos
-  Inc.}{Portland, OR, USA}{}{}
+    Website: ankitku.github.io | LinkedIn: linkedin.com/in/ankitkumar1988
+
+    Address: Northeastern University, Boston
+\end{center}
+
+\cvsection{PROFESSIONAL SUMMARY}
+Applied Scientist with proven expertise across finance and technology sectors, having delivered impactful solutions at Rivos, Amazon, Morgan Stanley, and Olacabs. Specializes in formal methods, theorem proving, and software verification with demonstrated success in translating cutting-edge research into practical, industry-ready applications.
+
+\cvsection{TECHNICAL SKILLS}
+\textbf{Programming Languages:} C, C++, Java, Rust, Lisp, ACL2 Sedan, Coq, Haskell
+
+\textbf{Development Tools:} Git, GitHub, Emacs, LaTeX, Shell Scripting
+
+\textbf{AI \& Machine Learning:} Agentic AI, Open AI, Claude, Cline, Amazon Q, LLMs, Prompt Engineering
+
+\textbf{Verification Tools:} Jaspergold, ACL2, ACL2 Sedan
+
+\textbf{Specializations:} Formal Methods, Theorem Proving, Software Verification, Security Analysis, Dataflow Analysis, Taint Analysis
+
+\cvsection{PROFESSIONAL EXPERIENCE}
+
+\cventry{Applied Scientist Intern}{Amazon}{Santa Clara, CA}{Summer 2025}{}{
 \begin{itemize}
-\item Formalized and proved security properties
-  about the page walk algorithm used by a RISC-V based hypervisor (high level model).
-\item Reduced ($\approx10$x) the time required to prove existing security theorems
-  stated in Jaspergold (low level model) from days to hours, by
-  transferring some of the identified helpful lemma from the high
-  level model.
-\item ACL2, ACL2 Sedan, Jaspergold
+    \item Pioneered Agentic AI methodology to auto-generate Rust code specifications from Java codebases
+    \item Leveraged dataflow analysis techniques to eliminate hallucinations and improve code correctness
+    \item Technologies: Java, Rust, Claude, Cline, Amazon Q, Agentic AI, Soot 
 \end{itemize}
-\cventry{Summer 2022}{Applied Scientist Intern}{Amazon}{Minneapolis,
-  MN, USA}{}{}
+}
+
+\cventry{Member of Technical Staff, Intern}{Rivos Inc.}{Portland, OR}{Summer 2023}{}{
 \begin{itemize}
-  \item Created a tool to identify possible critical data leaks from
-    AWS resources.
-  \item Demonstrated the use of taint-analysis tools for cloud
-    level tracking of critical data across AWS resources.
-  \item Patented this technique, and received an incline offer
-    from Amazon. 
-  \item Java, Grails, github, shell scripting
+    \item Architected comprehensive formal verification framework for RISC-V hypervisor page walk algorithm security properties
+    that helped accelerate proof verification by 10x (days to hours) through strategic lemma transfer from high-level models
+    \item Technologies: ACL2, ACL2 Sedan, Jaspergold
 \end{itemize}
+}
 
-\cventry{2012-2014}{Software Development Engineer
-  II}{Olacabs}{Bengaluru, KA, India}{}{}
+\cventry{Applied Scientist Intern}{Amazon}{Minneapolis, MN}{Summer 2022}{}{
 \begin{itemize}
-\item Wrote the first version of the Olacabs (Indian ride-hailing app
-  service, like Uber) android consumer app, responsible for over 80\%
-  of all cab bookings.
-  \item Debugged the Olacabs driver app, reducing instances of phone
-    crashes by more than 60\%.
-  \item Worked on cashless payment and online wallet systems. 
+    \item Engineered innovative taint-analysis framework for enterprise-scale tracking of sensitive data across AWS infrastructure
+    that earned return offer and recognition
+    \item Technologies: Java, Grails, GitHub, Shell Scripting
 \end{itemize}
+}
 
-\cventry{2010-2012}{Associate}{Morgan Stanley Advantage
-  Services}{Mumbai, MH, India}{}{}
+\cventry{Software Development Engineer II}{Olacabs}{Bengaluru, India}{2012-2014}{}{
 \begin{itemize}
-\item Refactored a derivatives trading platform to be region aware.
-\item Rolled out the platform to new markets (HK, SG) which increased
-  the number of trades it handled by more than 2x.
+    \item Architected inaugural Olacabs Android consumer application, capturing 80\% of total cab booking volume
+    \item Eliminated 60\% of driver app crashes through systematic debugging and optimization strategies
+    \item Implemented robust cashless payment and digital wallet systems, enhancing user transaction experience
+    \item Technologies: Java, Android, Git, Ruby on Rails
+\end{itemize}
+}
+
+\cventry{Associate}{Morgan Stanley Advantage Services}{Mumbai, India}{2010-2012}{}{
+\begin{itemize}
+    \item Transformed legacy derivatives trading platform architecture to support multi-regional deployment
+    \item Expanded platform reach to Hong Kong and Singapore markets, doubling transaction processing capacity
+    \item Technologies: .NET, Java, Spring, Perforce
+\end{itemize}
+}
+
+\cvsection{EDUCATION}
+
+\textbf{PhD in Computer Science} | Northeastern University | Boston, MA | 2018-2025
+\begin{itemize}
+    \item Thesis: Refinement-based reasoning of P2P protocols is feasible and useful
+    \item Additional Contributions: Automated homework feedback and checking systems, proof verification frameworks, string equation solvers
 \end{itemize}
 
+\textbf{M.Tech in Computer Science} | IIT Kanpur | Kanpur, India | 2015-2017
 
-\section{Education}
-\cventry{2018--2025}{PhD in Computer Science}{Northeastern
-  University}{Boston, MA, USA}{}{Applied theorem proving, counter-example
-  generation and the theory of refinement to analyze the Gossipsub
-  P2P protocol. Also worked on automated feedback
-  for homework submissions, proof checking and decision procedures for
-  solving string equations.}
-\quad\cvitem{Thesis}{Refinement based reasoning of P2P
-  protocols is feasible and useful}
+\textbf{B.Tech in Electrical Engineering} | IIT (BHU) Varanasi | Varanasi, India | 2006-2010
 
-\cventry{2015--2017}{M.Tech in Computer Science}{IIT Kanpur}{Kanpur,
-  UP, India}{}{}
-\cventry{2006-2010}{B.Tech in Electrical Engineering}{IIT (BHU)
-  Varanasi}{Varanasi, UP, India}{}{}
+\cvsection{PUBLICATIONS}
 
-\bibliographystyle{IEEE}
-\nocite{*}
-\bibliography{pubs.bib}
+1. A Formalization of the Correctness of the Floodsub Protocol - ACL2 Workshop 2025 - Best Student Paper Award
 
-\section{Awards and Honors}
-\cvitem{Fellowship}{Dissertation Completion Fellowship during Summer
-  2024.}
-\cvitem{Invited Talk - Syracuse University 2024}{Formal Model-Driven Analysis of Resilience of GossipSub to Attacks from Misbehaving Peers}
-\cvitem{Award}{Best Student Paper Award for our paper
-  ``Verification of GossipSub in ACL2s''  at ACL2 Workshop 2023.}
-\cvitem{Invited Talk - IPFS Camp at Lisbon,
-  2022}{\href{https://www.youtube.com/watch?v=T3QLhijHAwA}{Formal
-    Analysis of GossipSub : Property Driven Dev for Security}}
-\cvitem{Fellowship}{Student Travel Fellowship to attend PLMW at POPL 2019 conference.}
-\cvitem{Award}{\href{https://www.youtube.com/watch?v=AFact1zmnEM}{First Prize} at Droidcon India - Bangalore 2013 \href{https://www.youtube.com/watch?v=3qtuORgVMrQ}{Hackathon}}
+2. A Formalization of the Correctness of the Floodsub Protocol - arXiv preprint arXiv:2507.19013, 2025
+
+3. Formal Model-Driven Analysis of Resilience of GossipSub to Attacks from Misbehaving Peers - IEEE Symposium on Security and Privacy 2024
+
+4. Verification of GossipSub in ACL2s - ACL2 Workshop 2023 - Best Student Paper Award
+
+5. Automated Grading of Automata with ACL2s - Electronic Proceedings in Theoretical Computer Science 2023
+
+6. Proving Calculational Proofs Correct - ACL2 Workshop 2023
+
+7. Calculational Proofs in ACL2s - arXiv preprint 2023
+
+8. Mathematical Programming Modulo Strings - Formal Methods in Computer Aided Design 2021
+
+\cvsection{AWARDS AND HONORS}
+
+Best Student Paper Award, ACL2 Workshop 2025
+
+Dissertation Completion Fellowship, Summer 2024
+
+Invited Talk, Syracuse University 2024
+
+Best Student Paper Award, ACL2 Workshop 2023
+
+Invited Talk, IPFS Camp Lisbon 2022
+
+Student Travel Fellowship, PLMW at POPL 2019
+
+First Prize, Droidcon India Hackathon 2013
+
 \end{document}
