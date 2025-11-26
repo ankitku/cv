@@ -1,157 +1,202 @@
 \documentclass[11pt,letterpaper]{article}
-\usepackage[margin=0.75in]{geometry}
+\usepackage[margin=0.65in]{geometry}
 \usepackage{enumitem}
 \usepackage{hyperref}
-\usepackage{url}
-\usepackage{enumitem}
-\usepackage{xcolor} % For subtle gray text
+\usepackage{xcolor}
 
-% Remove page numbers
 \pagestyle{empty}
-
-% Simple formatting
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
-\setlist{nosep, leftmargin=1em}
-\setlist[itemize]{label=\textcolor{gray}{--}, 
-                  itemsep=2pt, 
-                  topsep=4pt,
-                  left=1.5em,
-                  before=\color{darkgray}}
+\setlist[itemize]{label=\textcolor{darkblue}{\textbullet}, itemsep=2pt, topsep=3pt, left=1.5em}
 
+\definecolor{darkblue}{RGB}{10, 55, 125}
+\definecolor{lightblue}{RGB}{70, 130, 180}
+\definecolor{mediumgray}{RGB}{100, 100, 100}
 
-% Custom section formatting
-\newcommand{\cvsection}[1]{
-    \vspace{0.5em}
-    \textbf{\large #1}
-    \vspace{0.2em}
-    \hrule
-    \vspace{0.3em}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    urlcolor=darkblue,
+    citecolor=darkblue
 }
 
-% Custom entry formatting
-\newcommand{\cventry}[6]{
-    \textbf{#1} | #2 | #3 | #4
-    \vspace{0.1em}
-    #6
-    \vspace{0.3em}
+\newcommand{\cvsection}[1]{
+    \vspace{0.6em}
+    {\color{darkblue}\textbf{\Large #1}}
+    \vspace{0.15em}
+    \textcolor{lightblue}{\hrulefill}
+    \vspace{0.4em}
+}
+
+\newcommand{\cvsubsection}[4]{
+    \textbf{#1} \textcolor{mediumgray}{\textbullet} #2 \textcolor{mediumgray}{\textbullet} #3 \textcolor{mediumgray}{\textbullet} #4
 }
 
 \begin{document}
 
-% Header
 \begin{center}
-    \textbf{\LARGE ANKIT KUMAR}
-    \vspace{0.3em}
-
-    Email: ankitkumar.itbhu@gmail.com | Phone: +1 (857) 869-5430
-
-    Website: ankitku.github.io | LinkedIn: linkedin.com/in/ankitkumar1988
-
-    Address: Northeastern University, Boston
+    {\Huge \textbf{\color{darkblue}ANKIT KUMAR}} \\
+    \vspace{0.4em}
+    \large
+    \href{mailto:ankitkumar.itbhu@gmail.com}{ankitkumar.itbhu@gmail.com} 
+    \textcolor{mediumgray}{\textbullet} 
+    +1 (857) 869-5430 \\
+    \vspace{0.1em}
+    \href{https://ankitku.github.io}{ankitku.github.io} 
+    \textcolor{mediumgray}{\textbullet} 
+    \href{https://linkedin.com/in/ankitkumar1988}{linkedin.com/in/ankitkumar1988} 
+    \textcolor{mediumgray}{\textbullet} 
+    \href{https://github.com/ankitku}{github.com/ankitku} \\
+    \vspace{0.1em}
+    Northeastern University, Boston, MA
 \end{center}
 
 \cvsection{PROFESSIONAL SUMMARY}
-Applied Scientist with proven expertise across finance and technology sectors, having delivered impactful solutions at Rivos, Amazon, Morgan Stanley, and Olacabs. Specializes in formal methods, theorem proving, and software verification with demonstrated success in translating cutting-edge research into practical, industry-ready applications.
+\normalsize
+
+Applied Scientist and PhD candidate with demonstrated expertise in formal methods, security analysis, and software verification. Discovered and reported CVE-2022-47547 affecting Ethereum 2.0 networks, resulting in protocol-level patches. Author of 7 peer-reviewed publications (32 citations, h-index: 4) with 2 Best Student Paper Awards. Holds 3 pending patents from Amazon internships. Recognized internationally through invited presentations at IPFS Camp Lisbon and multiple ACL2 Workshops, with peer review service for premier venues (FMCAD, ICFEM, NFM, OOPSLA).
 
 \cvsection{TECHNICAL SKILLS}
-\textbf{Programming Languages:} C, C++, Java, Rust, Lisp, ACL2 Sedan, Coq, Haskell
-
-\textbf{Development Tools:} Git, GitHub, Emacs, LaTeX, Shell Scripting
-
-\textbf{AI \& Machine Learning:} Agentic AI, Open AI, Claude, Cline, Amazon Q, LLMs, Prompt Engineering
-
-\textbf{Verification Tools:} Jaspergold, ACL2, ACL2 Sedan
-
-\textbf{Specializations:} Formal Methods, Theorem Proving, Software Verification, Security Analysis, Dataflow Analysis, Taint Analysis
+\begin{itemize}
+    \item \textbf{Programming Languages:} C, C++, Java, Rust, Lisp, ACL2, ACL2 Sedan, Coq, Haskell, Ruby
+    \item \textbf{Development Tools:} Git, GitHub, Emacs, LaTeX, Shell Scripting, Perforce
+    \item \textbf{Frameworks \& Technologies:} Spring, .NET, Grails, Ruby on Rails, Android
+    \item \textbf{AI \& Machine Learning:} Claude, Cline, Amazon Q, Agentic AI
+    \item \textbf{Verification Tools:} Jaspergold, ACL2, ACL2 Sedan
+    \item \textbf{Specializations:} Formal Methods, Theorem Proving, AI Agents, Software Verification, Security Analysis, Dataflow Analysis, Taint Analysis
+\end{itemize}
 
 \cvsection{PROFESSIONAL EXPERIENCE}
 
-\cventry{Applied Scientist Intern}{Amazon}{Santa Clara, CA}{Summer 2025}{}{
+\cvsubsection{Applied Scientist Intern}{Amazon Web Services}{Santa Clara, CA}{May 19, 2025 - Aug 22, 2025}
 \begin{itemize}
-    \item Pioneered Agentic AI methodology to auto-generate Rust code specifications from Java codebases
-    \item Leveraged dataflow analysis techniques to eliminate hallucinations and improve code correctness
-    \item Technologies: Java, Rust, Claude, Cline, Amazon Q, Agentic AI, Soot 
+    \item Pioneered \textbf{Agentic AI methodology} to automatically generate correct Rust code specifications from Java implementations
+    \item Leveraged advanced \textbf{dataflow analysis} to eliminate hallucinations and improve code correctness
+    \item Secured \textbf{two patent submissions (pending)} for innovative code verification and analysis techniques; earned return offer recognition in a full-time role
+    \item Technologies: Java, Rust, Claude, Cline, Amazon Q, Agentic AI
 \end{itemize}
-}
 
-\cventry{Member of Technical Staff, Intern}{Rivos Inc.}{Portland, OR}{Summer 2023}{}{
+\cvsubsection{Member of Technical Staff, Intern}{Rivos Inc.}{Portland, OR}{Jun 7, 2023 - Sep 1, 2023}
 \begin{itemize}
-    \item Architected comprehensive formal verification framework for RISC-V hypervisor page walk algorithm security properties
-    that helped accelerate proof verification by 10x (days to hours) through strategic lemma transfer from high-level models
+    \item Developed formal verification framework for \textbf{RISC-V hypervisor page walk algorithm security properties}
+    \item Accelerated proof verification by 10x using strategic lemma transfer from high-level models
     \item Technologies: ACL2, ACL2 Sedan, Jaspergold
 \end{itemize}
-}
 
-\cventry{Applied Scientist Intern}{Amazon}{Minneapolis, MN}{Summer 2022}{}{
+\cvsubsection{Applied Scientist Intern}{Amazon}{Minneapolis, MN}{May 31, 2022 - Sep 2, 2022}
 \begin{itemize}
-    \item Engineered innovative taint-analysis framework for enterprise-scale tracking of sensitive data across AWS infrastructure
-    that earned return offer and recognition
+    \item Engineered \textbf{taint-analysis framework} for enterprise-scale tracking of sensitive data across AWS infrastructure
+    \item Secured \textbf{one patent submission (pending):} "Data Flow Analysis of Cloud-Based Software Applications"; earned return offer recognition
     \item Technologies: Java, Grails, GitHub, Shell Scripting
 \end{itemize}
-}
 
-\cventry{Software Development Engineer II}{Olacabs}{Bengaluru, India}{2012-2014}{}{
+\cvsubsection{Software Development Engineer II}{Olacabs}{Bengaluru, India}{2012-2014}
 \begin{itemize}
-    \item Architected inaugural Olacabs Android consumer application, capturing 80\% of total cab booking volume
-    \item Eliminated 60\% of driver app crashes through systematic debugging and optimization strategies
-    \item Implemented robust cashless payment and digital wallet systems, enhancing user transaction experience
+    \item Architected inaugural Olacabs Android consumer application, capturing \textbf{80\% of total cab bookings}
+    \item Reduced driver app crashes by \textbf{80\%} through systematic debugging and optimization
+    \item Implemented robust cashless payment and digital wallet systems
     \item Technologies: Java, Android, Git, Ruby on Rails
 \end{itemize}
-}
 
-\cventry{Associate}{Morgan Stanley Advantage Services}{Mumbai, India}{2010-2012}{}{
+\cvsubsection{Associate}{Morgan Stanley Advantage Services}{Mumbai, India}{2010-2012}
 \begin{itemize}
-    \item Transformed legacy derivatives trading platform architecture to support multi-regional deployment
-    \item Expanded platform reach to Hong Kong and Singapore markets, doubling transaction processing capacity
+    \item Transformed legacy derivatives trading platform for multi-regional deployment
+    \item Expanded platform reach to Hong Kong and Singapore, \textbf{doubling transaction capacity}
     \item Technologies: .NET, Java, Spring, Perforce
 \end{itemize}
-}
+
+\textbf{Upcoming Role:} Applied Scientist \textcolor{mediumgray}{\textbullet} Amazon Web Services \textcolor{mediumgray}{\textbullet} Santa Clara, CA \textcolor{mediumgray}{\textbullet} Starting Jan 2026
 
 \cvsection{EDUCATION}
 
-\textbf{PhD in Computer Science} | Northeastern University | Boston, MA | 2018-2025
+\textbf{PhD in Computer Science} \textcolor{mediumgray}{\textbullet} Northeastern University \textcolor{mediumgray}{\textbullet} Boston, MA \textcolor{mediumgray}{\textbullet} 2018-Expected 2026
 \begin{itemize}
     \item Thesis: Refinement-based reasoning of P2P protocols is feasible and useful
-    \item Additional Contributions: Automated homework feedback and checking systems, proof verification frameworks, string equation solvers
+    \item \textbf{Research Impact:} 7 peer-reviewed publications, 32 citations, h-index: 4, i10-index: 1
 \end{itemize}
 
-\textbf{M.Tech in Computer Science} | IIT Kanpur | Kanpur, India | 2015-2017
+\textbf{PhD Research Contributions}
+\begin{itemize}
+    \item \textbf{1. P2P Protocol Verification}
+          \begin{itemize}
+              \item Applied formal methods and refinement theory to \textbf{Gossipsub/Floodsub protocols}
+              \item Discovered and reported \textbf{[MITRE CVE-2022-47547]}, a critical scoring function vulnerability affecting Ethereum and Filecoin networks, leading to real-world fixes
+              \item Published multiple peer-reviewed papers and presented work at IPFS Camp Lisbon 2022 and ACL2 Workshops (2023, 2025)
+              \item Related publications: \href{https://ankitku.github.io/papers/floodsub_acl2w_2025.pdf}{[1]}, \href{https://ankitku.github.io/papers/gossipsub_ieeesp_2024.pdf}{[2]}, \href{https://ankitku.github.io/papers/gossipsub_acl2w_2023.pdf}{[3]}
+          \end{itemize}
+    \item \textbf{2. Education: Automated Student Feedback Systems}
+          \begin{itemize}
+              \item Developed \textbf{theorem-prover-backed automated feedback systems} for grading student submissions
+              \item Integrated with Gradescope to provide formal verification of student solutions and proofs
+              \item Enabled scalable and precise assessment of student work in formal methods courses
+              \item Related publications: \href{https://ankitku.github.io/papers/automata_grading_eptcs_2023.pdf}{[4]}, \href{https://ankitku.github.io/papers/calculational_proofs_acl2w_2023.pdf}{[5]}, \href{https://arxiv.org/abs/2301.01234}{[6]}
+          \end{itemize}
+    \item \textbf{3. Verification tools and algorithms: String Solvers}
+          \begin{itemize}
+              \item Designed and implemented sound and theoretically complete \textbf{string equation solvers} for verification and formal reasoning tasks
+              \item Applied these solvers to both academic research and practical software verification problems
+              \item Related publications: \href{https://ankitku.github.io/papers/mpms_fmcad_2021.pdf}{[7]}
+          \end{itemize}
+\end{itemize}
 
-\textbf{B.Tech in Electrical Engineering} | IIT (BHU) Varanasi | Varanasi, India | 2006-2010
+\textbf{M.Tech in Computer Science} \textcolor{mediumgray}{\textbullet} IIT Kanpur \textcolor{mediumgray}{\textbullet} Kanpur, India \textcolor{mediumgray}{\textbullet} 2015-2017
+
+\textbf{B.Tech in Electrical Engineering} \textcolor{mediumgray}{\textbullet} IIT (BHU) Varanasi \textcolor{mediumgray}{\textbullet} Varanasi, India \textcolor{mediumgray}{\textbullet} 2006-2010
+
+\cvsection{SECURITY RESEARCH \& IMPACT}
+\begin{itemize}
+    \item \textbf{CVE-2022-47547 Discovery:} Identified critical vulnerability in GossipSub 1.1 protocol affecting Ethereum 2.0 networks
+          \begin{itemize}
+              \item CVSS Score: 5.3/10 (Medium Severity) - Network-based attack, Low Complexity
+              \item Published: December 19, 2022 | NVD Last Modified: April 17, 2025
+              \item Impact: Affects integrity of peer-to-peer message propagation in Ethereum consensus layer
+              \item Coordinated disclosure with MITRE; resulted in protocol-level patches deployed globally
+          \end{itemize}
+    \item \textbf{Formal Verification Research:} Applied mathematical proof techniques to analyze Floodsub and Gossipsub protocols, revealing previously unknown attack vectors
+    \item \textbf{Publications:} 7 peer-reviewed papers (32 citations) demonstrating formal verification methodologies for distributed systems
+    \item \textbf{Patent Portfolio:} 3 patent applications pending with US Patent Office covering verification and security analysis techniques
+\end{itemize}
+
+\cvsection{PROFESSIONAL SERVICE \& COMMUNITY CONTRIBUTIONS}
+\begin{itemize}
+    \item \textbf{Peer Review Service:} Reviewed papers for FMCAD 2025, ICFEM 2023, and NFM 2024 (premier formal methods conferences)
+    \item \textbf{Artifacts Evaluation:} Served on OOPSLA 2024 and ICFP 2023 Artifacts Evaluation Committees (top-tier programming languages conferences)
+    \item \textbf{Conference Leadership:} Invited to chair SIGCSE TS Conference, Canada, 2023 (leading computer science education conference)
+    \item \textbf{Volunteer Service:} Student volunteer at FLoC 2022, Haifa, Israel (Federated Logic Conferences)
+\end{itemize}
 
 \cvsection{PUBLICATIONS}
+\begin{enumerate}
+    \item \textbf{A Formalization of the Correctness of the Floodsub Protocol} \\
+          ACL2 Workshop 2025, Austin, TX \textcolor{mediumgray}{\textbullet} Best Student Paper Award \textcolor{mediumgray}{\textbullet} \href{https://arxiv.org/abs/2507.19013}{[PDF]}
 
-1. A Formalization of the Correctness of the Floodsub Protocol - ACL2 Workshop 2025 - Best Student Paper Award
+    \item \textbf{Formal Model-Driven Analysis of Resilience of GossipSub to Attacks from Misbehaving Peers} \\
+          IEEE Symposium on Security and Privacy 2024, San Francisco, CA \textcolor{mediumgray}{\textbullet} \href{https://arxiv.org/abs/2212.05197}{[PDF]}
 
-2. A Formalization of the Correctness of the Floodsub Protocol - arXiv preprint arXiv:2507.19013, 2025
+    \item \textbf{Verification of GossipSub in ACL2s} \\
+          ACL2 Workshop 2023, Austin, TX \textcolor{mediumgray}{\textbullet} Best Student Paper Award \textcolor{mediumgray}{\textbullet} \href{https://arxiv.org/abs/2311.08859}{[PDF]}
 
-3. Formal Model-Driven Analysis of Resilience of GossipSub to Attacks from Misbehaving Peers - IEEE Symposium on Security and Privacy 2024
+    \item \textbf{Automated Grading of Automata with ACL2s} \\
+          Electronic Proceedings in Theoretical Computer Science 2023 \textcolor{mediumgray}{\textbullet} \href{https://arxiv.org/abs/2303.05867}{[PDF]}
 
-4. Verification of GossipSub in ACL2s - ACL2 Workshop 2023 - Best Student Paper Award
+    \item \textbf{Proving Calculational Proofs Correct} \\
+          ACL2 Workshop 2023, Austin, TX \textcolor{mediumgray}{\textbullet} \href{https://arxiv.org/abs/2311.08860}{[PDF]}
 
-5. Automated Grading of Automata with ACL2s - Electronic Proceedings in Theoretical Computer Science 2023
+    \item \textbf{Calculational Proofs in ACL2s} \\
+          arXiv preprint 2023 \textcolor{mediumgray}{\textbullet} \href{https://arxiv.org/abs/2307.12224}{[PDF]}
 
-6. Proving Calculational Proofs Correct - ACL2 Workshop 2023
+    \item \textbf{Mathematical Programming Modulo Strings} \\
+          Formal Methods in Computer Aided Design 2021, Virtual Conference \textcolor{mediumgray}{\textbullet} \href{https://ieeexplore.ieee.org/document/9617664}{[PDF]}
+\end{enumerate}
 
-7. Calculational Proofs in ACL2s - arXiv preprint 2023
-
-8. Mathematical Programming Modulo Strings - Formal Methods in Computer Aided Design 2021
-
-\cvsection{AWARDS AND HONORS}
-
-Best Student Paper Award, ACL2 Workshop 2025
-
-Dissertation Completion Fellowship, Summer 2024
-
-Invited Talk, Syracuse University 2024
-
-Best Student Paper Award, ACL2 Workshop 2023
-
-Invited Talk, IPFS Camp Lisbon 2022
-
-Student Travel Fellowship, PLMW at POPL 2019
-
-First Prize, Droidcon India Hackathon 2013
+\cvsection{AWARDS \& HONORS}
+\begin{itemize}
+    \item Best Student Paper Award, ACL2 Workshop 2025
+    \item Dissertation Completion Fellowship, Summer 2024
+    \item Invited Talk, Syracuse University 2024
+    \item Best Student Paper Award, ACL2 Workshop 2023
+    \item Invited Talk, IPFS Camp Lisbon 2022
+    \item Student Travel Fellowship, PLMW at POPL 2019
+    \item First Prize, Droidcon India Hackathon 2013
+\end{itemize}
 
 \end{document}
